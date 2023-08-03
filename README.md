@@ -1,8 +1,8 @@
 # Table of contents
 1. [Running Cosmolike projects](#running_cosmolike_projects)
 2. [Deleting Cosmolike projects](#delete_projects)
-3. [Updating the data folder ](#updating_data)
-   
+3. [Updating the data folder](#updating_data)
+4. [Optimistic/Pessimistic choice of parameters](#opt_neg)   
 ## Running Cosmolike projects <a name="running_cosmolike_projects"></a> 
 
 In this tutorial, we assume the user installed Cocoa via the *Conda installation* method, and the name of the Conda environment is `cocoa`. We also presume the user's terminal is in the folder where Cocoa was cloned.
@@ -74,3 +74,10 @@ The Conda Cocoa environment contains the `xz` compression program.
         $(cocoa) tar -cf - data/ | xz -k -9e --threads=1 -c - > data.xz
 
 Compression may take a few minutes. Afterward, proceed with the usual `git commit` and `git push` commands.
+
+## Optimistic/Pessimistic choice of parameters <a name="opt_neg"></a>
+
+This is our suggestion for optimistic/pessimistic choices of IA, photo-z and shear bias.
+
+<img width="627" alt="Screenshot 2023-08-03 at 3 57 17 PM" src="https://github.com/SBU-COSMOLIKE/cocoa_lsst_les/assets/3210728/909f2f51-1e92-42cf-98c4-f18d6de3584e">
+
