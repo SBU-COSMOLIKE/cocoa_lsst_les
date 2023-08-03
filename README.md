@@ -11,7 +11,7 @@ In this tutorial, we assume the user installed Cocoa via the *Conda installation
     
         $ conda activate cocoa
 
-:two: **Step 2 of 7**: go to the project folder (`./cocoa/Cocoa/projects`) and clone the Cosmolike LSST-Y1 project:
+:two: **Step 2 of 7**: go to the `projects` folder and clone the Cosmolike LSST-Y1 project:
     
         $(cocoa) cd ./cocoa/Cocoa/projects
         $(cocoa) git clone --depth 1 git@github.com:SBU-COSMOLIKE/cocoa_lsst_les lsst_les
@@ -57,7 +57,19 @@ MCMC:
 
 ## Updating the data folder <a name="updating_data"></a>
 
-The Conda Cocoa environment contains the `xz` compression program. To update the data folder and push the changes to this git repository, delete the `data.xz` file, and then type
+In this tutorial, we assume the user installed Cocoa via the *Conda installation* method, and the name of the Conda environment is `cocoa`. We also presume the user's terminal is in the folder where Cocoa was cloned.
+
+:one: **Step 1 of 3**: activate the Conda Cocoa environment
+    
+        $ conda activate cocoa
+        
+The Conda Cocoa environment contains the `xz` compression program. 
+
+:two: **Step 2 of 3**: go to the `lsst_les` folder and clone the Cosmolike LSST-Y1 project:
+    
+        $(cocoa) cd ./cocoa/Cocoa/projects/lsst_les
+
+:three: **Step 3 of 3**: delete the `data.xz` file, and then type
 
     $(cocoa) tar -cf - data/ | xz -k -9e --threads=1 -c - > data.xz
 
