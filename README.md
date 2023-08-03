@@ -1,6 +1,6 @@
 # Table of contents
 1. [Running Cosmolike projects](#running_cosmolike_projects)
-2. [Deleting Cosmolike projectsa](#delete_projects)
+2. [Deleting Cosmolike projects](#delete_projects)
 3. [Updating the data folder ](#updating_data)
    
 ## Running Cosmolike projects <a name="running_cosmolike_projects"></a> 
