@@ -19,7 +19,7 @@ The option `--depth 1` prevents git from downloading the entire project history.
         $(cocoa) cd ./cocoa_les
         $(cocoa) tar xf data.xz
 
-Git ignores the `data` folder (thanks to `.gitignore`) because the covariance files are too large not to be handled by Git-LFS. Git-LFS costs money, so we compress the folder using the `xz` [file format](https://tukaani.org/xz/format.html) (the Conda Cocoa environment contains the `xz` compression program).
+Git ignores the `data` folder (thanks to `.gitignore`) because the covariance files are too large not to be handled by Git-LFS. Git-LFS costs money, so we compress the folder using the `xz` [file format](https://tukaani.org/xz/format.html).
 
 :four: **Step 4 of 7**: go back to the Cocoa main folder, and activate the private Python environment
     
@@ -46,6 +46,14 @@ MCMC:
 
         $(cocoa)(.local) mpirun -n 4 --mca btl tcp,self --bind-to core:overload-allowed --rank-by core --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_les/EXAMPLE_MCMC1.yaml -f
 
-## Deleting Cosmolike projects <a name="running_cosmolike_projects"></a>
+## Deleting Cosmolike projects <a name="delete_projects"></a>
 
 :warning: (**warning**) :warning: Never delete the `lsst_les` folder from the project folder without running `stop_cocoa` first; otherwise, Cocoa will have ill-defined soft links at `Cocoa/cobaya/cobaya/likelihoods/` , `Cocoa/external_modules/code/` and `Cocoa/external_modules/data/`
+
+## Updating the data folder <a name="updating_data"></a>
+
+The Conda Cocoa environment contains the `xz` compression program. To update the data folder and push the changes to this git repository, delete the `data.xz` file, and then type
+
+    $(cocoa) tar -cf - data/ | xz -k -9e --threads=1 -c - > data.xz
+
+Compression may take a few minutes. Afterward, proceed with the usual `git commit` and `git push` commands.
