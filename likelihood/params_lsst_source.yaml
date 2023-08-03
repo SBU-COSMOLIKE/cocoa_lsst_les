@@ -1,60 +1,117 @@
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
   # WL photo-z errors
   LSST_DZ_S1:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.002
+      scale: 0.005
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.002
-    proposal: 0.002
+      scale: 0.005
+    proposal: 0.005
     latex: \Delta z_\mathrm{s,LSST}^1
   LSST_DZ_S2:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.002
+      scale: 0.005
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.002
-    proposal: 0.002
+      scale: 0.005
+    proposal: 0.005
     latex: \Delta z_\mathrm{s,LSST}^2
   LSST_DZ_S3:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.002
+      scale: 0.005
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.002
-    proposal: 0.002
+      scale: 0.005
+    proposal: 0.005
     latex: \Delta z_\mathrm{s,LSST}^3
   LSST_DZ_S4:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.002
+      scale: 0.005
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.002
-    proposal: 0.002
+      scale: 0.005
+    proposal: 0.005
     latex: \Delta z_\mathrm{s,LSST}^4
   LSST_DZ_S5:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.002
+      scale: 0.005
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.002
-    proposal: 0.002
+      scale: 0.005
+    proposal: 0.005
     latex: \Delta z_\mathrm{s,LSST}^5
-
+  LSST_DZ_S6:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{s,LSST}^6
+  LSST_DZ_S7:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{s,LSST}^7
+  LSST_DZ_S8:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{s,LSST}^8
+  LSST_DZ_S9:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{s,LSST}^9
+  LSST_DZ_S10:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{s,LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -88,31 +145,29 @@
   LSST_A1_5:
     value: 0
     latex: A_\mathrm{1-IA,LSST}^5
-
+  LSST_A1_6:
+    value: 0
+    latex: A_\mathrm{1-IA,LSST}^6
+  LSST_A1_7:
+    value: 0
+    latex: A_\mathrm{1-IA,LSST}^7
+  LSST_A1_8:
+    value: 0
+    latex: A_\mathrm{1-IA,LSST}^8
+  LSST_A1_9:
+    value: 0
+    latex: A_\mathrm{1-IA,LSST}^9
+  LSST_A1_10:
+    value: 0
+    latex: A_\mathrm{1-IA,LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   LSST_A2_1:
     value: 0.0
-    #prior:
-    #  min: -5
-    #  max:  5
-    #ref:
-    #  dist: norm
-    #  loc: -1.36
-    #  scale: 0.5
-    #proposal: 0.5
     latex: A_\mathrm{2-IA,LSST}^1
   LSST_A2_2:
     value: 0.0
-    #prior:
-    #  min: -5
-    #  max:  5
-    #ref:
-    #  dist: norm
-    #  loc: -2.5
-    #  scale: 0.5
-    #proposal: 0.5
     latex: A_\mathrm{2-IA,LSST}^2
   LSST_A2_3:
     value: 0
@@ -123,20 +178,26 @@
   LSST_A2_5:
     value: 0
     latex: A_\mathrm{2-IA,LSST}^5
-
+  LSST_A2_6:
+    value: 0
+    latex: A_\mathrm{2-IA,LSST}^6
+  LSST_A2_7:
+    value: 0
+    latex: A_\mathrm{2-IA,LSST}^7
+  LSST_A2_8:
+    value: 0
+    latex: A_\mathrm{2-IA,LSST}^8
+  LSST_A2_9:
+    value: 0
+    latex: A_\mathrm{2-IA,LSST}^9
+  LSST_A2_10:
+    value: 0
+    latex: A_\mathrm{2-IA,LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   LSST_BTA_1:
     value: 0.0
-    #prior:
-    #  min: 0
-    #  max: 2
-    #ref:
-    #  dist: norm
-    #  loc: 1
-    #  scale: 0.15
-    #proposal: 0.1
     latex: A_\mathrm{BTA-IA,LSST}^1
   LSST_BTA_2:
     value: 0
@@ -150,11 +211,21 @@
   LSST_BTA_5:
     value: 0
     latex: A_\mathrm{BTA-IA,LSST}^5
-
- # ------------------------------------------------------------------------
- # ------------------------------------------------------------------------
- # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
+  LSST_BTA_6:
+    value: 0
+    latex: A_\mathrm{BTA-IA,LSST}^6
+  LSST_BTA_7:
+    value: 0
+    latex: A_\mathrm{BTA-IA,LSST}^7
+  LSST_BTA_8:
+    value: 0
+    latex: A_\mathrm{BTA-IA,LSST}^8
+  LSST_BTA_9:
+    value: 0
+    latex: A_\mathrm{BTA-IA,LSST}^9
+  LSST_BTA_10:
+    value: 0
+    latex: A_\mathrm{BTA-IA,LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -163,57 +234,112 @@
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.005
+      scale: 0.01
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.005
-    proposal: 0.005
+      scale: 0.01
+    proposal: 0.01
     latex: m_\mathrm{LSST}^1
   LSST_M2:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.005
+      scale: 0.01
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.005
-    proposal: 0.005
+      scale: 0.01
+    proposal: 0.01
     latex: m_\mathrm{LSST}^2
   LSST_M3:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.005
+      scale: 0.01
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.005
-    proposal: 0.005
+      scale: 0.01
+    proposal: 0.01
     latex: m_\mathrm{LSST}^3
   LSST_M4:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.005
+      scale: 0.01
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.005
-    proposal: 0.005
+      scale: 0.01
+    proposal: 0.01
     latex: m_\mathrm{LSST}^4
   LSST_M5:
     prior:
       dist: norm
       loc: 0.0
-      scale: 0.005
+      scale: 0.01
     ref:
       dist: norm
       loc: 0.0
-      scale: 0.005
-    proposal: 0.005
+      scale: 0.01
+    proposal: 0.01
     latex: m_\mathrm{LSST}^5
+  LSST_M6:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    proposal: 0.01
+    latex: m_\mathrm{LSST}^6
+  LSST_M7:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    proposal: 0.01
+    latex: m_\mathrm{LSST}^7
+  LSST_M8:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    proposal: 0.01
+    latex: m_\mathrm{LSST}^8
+  LSST_M9:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    proposal: 0.01
+    latex: m_\mathrm{LSST}^9
+  LSST_M10:
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.01
+    proposal: 0.01
+    latex: m_\mathrm{LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------

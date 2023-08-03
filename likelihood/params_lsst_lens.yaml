@@ -1,130 +1,3 @@
-  # WL photo-z errors
-  LSST_DZ_S1:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    proposal: 0.002
-    latex: \Delta z_\mathrm{s,LSST}^1
-  LSST_DZ_S2:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    proposal: 0.002
-    latex: \Delta z_\mathrm{s,LSST}^2
-  LSST_DZ_S3:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    proposal: 0.002
-    latex: \Delta z_\mathrm{s,LSST}^3
-  LSST_DZ_S4:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    proposal: 0.002
-    latex: \Delta z_\mathrm{s,LSST}^4
-  LSST_DZ_S5:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.002
-    proposal: 0.002
-    latex: \Delta z_\mathrm{s,LSST}^5
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # Intrinsic alignment
-  LSST_A1_1:
-    prior:
-      min: -5
-      max:  5
-    ref:
-      dist: norm
-      loc: 0.5
-      scale: 0.1
-    proposal: 0.5
-    latex: A_\mathrm{1-IA,LSST}^1
-  LSST_A1_2:
-    prior:
-      min: -5
-      max:  5
-    ref:
-      dist: norm
-      loc: 0.
-      scale: 0.1
-    proposal: 0.5
-    latex: A_\mathrm{1-IA,LSST}^2
-  LSST_A1_3:
-    value: 0
-    latex: A_\mathrm{1-IA,LSST}^3
-  LSST_A1_4:
-    value: 0
-    latex: A_\mathrm{1-IA,LSST}^4
-  LSST_A1_5:
-    value: 0
-    latex: A_\mathrm{1-IA,LSST}^5
-
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  LSST_A2_1:
-    value: 0.0
-    latex: A_\mathrm{2-IA,LSST}^1
-  LSST_A2_2:
-    value: 0.0
-    latex: A_\mathrm{2-IA,LSST}^2
-  LSST_A2_3:
-    value: 0
-    latex: A_\mathrm{2-IA,LSST}^3
-  LSST_A2_4:
-    value: 0
-    latex: A_\mathrm{2-IA,LSST}^4
-  LSST_A2_5:
-    value: 0
-    latex: A_\mathrm{2-IA,LSST}^5
-
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  LSST_BTA_1:
-    value: 0.0
-    latex: A_\mathrm{BTA-IA,LSST}^1
-  LSST_BTA_2:
-    value: 0
-    latex: A_\mathrm{BTA-IA,LSST}^2
-  LSST_BTA_3:
-    value: 0
-    latex: A_\mathrm{BTA-IA,LSST}^3
-  LSST_BTA_4:
-    value: 0
-    latex: A_\mathrm{BTA-IA,LSST}^4
-  LSST_BTA_5:
-    value: 0
-    latex: A_\mathrm{BTA-IA,LSST}^5
  # ------------------------------------------------------------------------
  # ------------------------------------------------------------------------
  # ------------------------------------------------------------------------
@@ -174,7 +47,7 @@
     proposal: 0.005
     latex: \Delta z_\mathrm{l,LSST}^4
   LSST_DZ_L5:
-    prior:
+     prior:
       dist: norm
       loc: 0.0
       scale: 0.005
@@ -184,6 +57,61 @@
       scale: 0.005
     proposal: 0.005
     latex: \Delta z_\mathrm{l,LSST}^5
+  LSST_DZ_L6:
+     prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{l,LSST}^6
+  LSST_DZ_L7:
+     prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{l,LSST}^7
+  LSST_DZ_L8:
+     prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{l,LSST}^8
+  LSST_DZ_L9:
+     prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{l,LSST}^9
+  LSST_DZ_L10:
+     prior:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 0.005
+    proposal: 0.005
+    latex: \Delta z_\mathrm{l,LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -238,6 +166,56 @@
       scale: 0.1
     proposal: 0.1
     latex: b_\mathrm{1-LSST}^5
+  LSST_B1_6:
+    prior:
+      min: 0.8
+      max: 3
+    ref:
+      dist: norm
+      loc: 1.8
+      scale: 0.1
+    proposal: 0.1
+    latex: b_\mathrm{1-LSST}^6
+  LSST_B1_7:
+    prior:
+      min: 0.8
+      max: 3
+    ref:
+      dist: norm
+      loc: 2.0
+      scale: 0.1
+    proposal: 0.1
+    latex: b_\mathrm{1-LSST}^7
+  LSST_B1_8:
+    prior:
+      min: 0.8
+      max: 3
+    ref:
+      dist: norm
+      loc: 2.15
+      scale: 0.1
+    proposal: 0.1
+    latex: b_\mathrm{1-LSST}^8
+  LSST_B1_9:
+    prior:
+      min: 0.8
+      max: 3
+    ref:
+      dist: norm
+      loc: 2.30
+      scale: 0.1
+    proposal: 0.1
+    latex: b_\mathrm{1-LSST}^9
+  LSST_B1_10:
+    prior:
+      min: 0.8
+      max: 3
+    ref:
+      dist: norm
+      loc: 2.45
+      scale: 0.1
+    proposal: 0.1
+    latex: b_\mathrm{1-LSST}^10
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -256,6 +234,21 @@
   LSST_B2_5:
     value: 0.0
     latex: b_\mathrm{2-LSST}^5
+  LSST_B2_6:
+    value: 0.0
+    latex: b_\mathrm{2-LSST}^6
+  LSST_B2_7:
+    value: 0.0
+    latex: b_\mathrm{2-LSST}^7
+  LSST_B2_8:
+    value: 0.0
+    latex: b_\mathrm{2-LSST}^8
+  LSST_B2_9:
+    value: 0.0
+    latex: b_\mathrm{2-LSST}^9
+  LSST_B2_10:
+    value: 0.0
+    latex: b_\mathrm{2-LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -274,65 +267,21 @@
   LSST_BMAG_5:
     value: 0.416
     latex: b_\mathrm{BMAG-LSST}^5
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # ------------------------------------------------------------------------
-  # Shear calibration parameters
-  LSST_M1:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    proposal: 0.005
-    latex: m_\mathrm{LSST}^1
-  LSST_M2:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    proposal: 0.005
-    latex: m_\mathrm{LSST}^2
-  LSST_M3:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    proposal: 0.005
-    latex: m_\mathrm{LSST}^3
-  LSST_M4:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    proposal: 0.005
-    latex: m_\mathrm{LSST}^4
-  LSST_M5:
-    prior:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    ref:
-      dist: norm
-      loc: 0.0
-      scale: 0.005
-    proposal: 0.005
-    latex: m_\mathrm{LSST}^5
+  LSST_BMAG_6:
+    value: -0.898
+    latex: b_\mathrm{BMAG-LSST}^6
+  LSST_BMAG_7:
+    value: -0.659
+    latex: b_\mathrm{BMAG-LSST}^7
+  LSST_BMAG_8:
+    value: -0.403
+    latex: b_\mathrm{BMAG-LSST}^8
+  LSST_BMAG_9:
+    value: -0.0704
+    latex: b_\mathrm{BMAG-LSST}^9
+  LSST_BMAG_10:
+    value: 0.416
+    latex: b_\mathrm{BMAG-LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
@@ -352,6 +301,21 @@
   LSST_PM5:
     value: 0.0
     latex: PM_\mathrm{LSST}^5
+  LSST_PM6:
+    value: 0.0
+    latex: PM_\mathrm{LSST}^6
+  LSST_PM7:
+    value: 0.0
+    latex: PM_\mathrm{LSST}^7
+  LSST_PM8:
+    value: 0.0
+    latex: PM_\mathrm{LSST}^8
+  LSST_PM9:
+    value: 0.0
+    latex: PM_\mathrm{LSST}^9
+  LSST_PM10:
+    value: 0.0
+    latex: PM_\mathrm{LSST}^{10}
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------
   # ------------------------------------------------------------------------

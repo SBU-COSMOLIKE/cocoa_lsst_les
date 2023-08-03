@@ -18,4 +18,4 @@ filename_baryon_pca: "./projects/lsst_les/data/pca.txt"
 print_datavector: False
 print_datavector_file: "./projects/lsst_les/chains/lsst_les_y1_theory.modelvector"
 
-params: !defaults [params_lsst_cosmic_shear]
+params: !defaults [params_lsst_source]
