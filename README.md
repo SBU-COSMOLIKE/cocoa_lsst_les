@@ -19,9 +19,9 @@ The option `--depth 1` prevents git from downloading the entire project history.
         $(cocoa) cd ./cocoa_les
         $(cocoa) tar xf data.xz
 
-Git ignores the `data` folder (because of our `.gitignore` file) because the covariance files are too large not to be handled by Git-LFS. Git-LFS costs money, so we compress the folder using the `xz` [f]ile format](https://tukaani.org/xz/format.html).
+Git ignores the `data` folder (thanks to `.gitignore`) because the covariance files are too large not to be handled by Git-LFS. Git-LFS costs money, so we compress the folder using the `xz` [f]ile format](https://tukaani.org/xz/format.html).
 
-:four: **Step 4 of 7**: go back to Cocoa main folder, and activate the private python environment
+:four: **Step 4 of 7**: go back to the Cocoa main folder, and activate the private Python environment
     
         $(cocoa) cd ../
         $(cocoa) source start_cocoa
