@@ -71,6 +71,6 @@ The Conda Cocoa environment contains the `xz` compression program.
 
 :three: **Step 3 of 3**: delete the `data.xz` file, and then type
 
-    $(cocoa) tar -cf - data/ | xz -k -9e --threads=1 -c - > data.xz
+        $(cocoa) tar -cf - data/ | xz -k -9e --threads=1 -c - > data.xz
 
 Compression may take a few minutes. Afterward, proceed with the usual `git commit` and `git push` commands.
