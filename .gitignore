@@ -1,0 +1,8 @@
+*.o
+*.pyc
+*.so
+*.pyo
+*.cfg
+*.cov
+data/
+chains/
