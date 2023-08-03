@@ -77,7 +77,7 @@ Compression may take a few minutes. Afterward, proceed with the usual `git commi
 
 ## Optimistic/Pessimistic choice of parameters <a name="opt_neg"></a>
 
-This is our suggestion for optimistic/pessimistic choices of IA/photo-z.
+This is our suggestion for optimistic/pessimistic choices of IA, photo-z and shear bias.
 
 <img width="627" alt="Screenshot 2023-08-03 at 3 57 17 PM" src="https://github.com/SBU-COSMOLIKE/cocoa_lsst_les/assets/3210728/909f2f51-1e92-42cf-98c4-f18d6de3584e">
 
