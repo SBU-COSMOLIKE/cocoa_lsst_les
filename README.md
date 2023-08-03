@@ -1,3 +1,8 @@
+# Table of contents
+1. [Running Cosmolike projects](#running_cosmolike_projects)
+2. [Deleting Cosmolike projectsa](#delete_projects)
+3. [Updating the data folder ](#updating_data)
+   
 ## Running Cosmolike projects <a name="running_cosmolike_projects"></a> 
 
 In this tutorial, we assume the user installed Cocoa via the *Conda installation* method, and the name of the Conda environment is `cocoa`. We also presume the user's terminal is in the folder where Cocoa was cloned.
