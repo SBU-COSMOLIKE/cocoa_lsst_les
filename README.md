@@ -3,6 +3,8 @@
 2. [Deleting Cosmolike projects](#delete_projects)
 3. [Updating the data folder](#updating_data)
 4. [Optimistic/Pessimistic choice of parameters](#opt_neg)   
+5. [Mask choices](#mask_choices) 
+
 ## Running Cosmolike projects <a name="running_cosmolike_projects"></a> 
 
 In this tutorial, we assume the user installed Cocoa via the *Conda installation* method, and the name of the Conda environment is `cocoa`. We also presume the user's terminal is in the folder where Cocoa was cloned.
@@ -77,7 +79,28 @@ Compression may take a few minutes. Afterward, proceed with the usual `git commi
 
 ## Optimistic/Pessimistic choice of parameters <a name="opt_neg"></a>
 
-This is our suggestion for optimistic/pessimistic choices of IA, photo-z and shear bias.
+This is our suggestion for optimistic/pessimistic choices of IA, photo-z, and shear bias.
 
 <img width="627" alt="Screenshot 2023-08-03 at 3 57 17 PM" src="https://github.com/SBU-COSMOLIKE/cocoa_lsst_les/assets/3210728/909f2f51-1e92-42cf-98c4-f18d6de3584e">
 
+## Mask choices <a name="mask_choices"></a>
+
+The Python file `calculate_mask.py` on `/data` allows the user to create mask files. We do provide the following mask files for Y1/Y3/Y6/Y10 data
+        if (mask_choice == 1):
+          # LSST_YX_M1.mask  (lmax = 3000) on CS -----------------------------------------
+          # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
+          ξp_CUTOFF = 2.756  # cutoff scale in arcminutes
+          ξm_CUTOFF = 8.696  # cutoff scale in arcminutes
+          gc_CUTOFF = 21     # Galaxy clustering cutoff in Mpc/h
+        elif (mask_choice == 2):
+          # LSST_YX_M2.mask  (lmax = 1500) on CS -----------------------------------------
+          # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
+          ξp_CUTOFF = 5.512  # cutoff scale in arcminutes
+          ξm_CUTOFF = 17.392  # cutoff scale in arcminutes
+          gc_CUTOFF = 21     # Galaxy clustering cutoff in Mpc/h
+        elif (mask_choice == 3):
+          # LSST_YX_M3.mask  (lmax = 750) on CS -----------------------------------------
+          # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
+          ξp_CUTOFF = 11.024 # cutoff scale in arcminutes
+          ξm_CUTOFF = 34.784 # cutoff scale in arcminutes
+          gc_CUTOFF = 21     # Galaxy clustering cutoff in Mpc/h
