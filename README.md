@@ -86,6 +86,7 @@ This is our suggestion for optimistic/pessimistic choices of IA, photo-z, and sh
 ## Mask choices <a name="mask_choices"></a>
 
 The Python file `calculate_mask.py` on `/data` allows the user to create mask files. We do provide the following mask files for Y1/Y3/Y6/Y10 data
+
         if (mask_choice == 1):
           # LSST_YX_M1.mask  (lmax = 3000) on CS -----------------------------------------
           # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
