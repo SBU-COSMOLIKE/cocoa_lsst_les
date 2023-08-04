@@ -89,19 +89,26 @@ The Python file `calculate_mask.py` on `/data` allows the user to create mask fi
 
         if (mask_choice == 1):
           # LSST_YX_M1.mask  (lmax = 3000) on CS -----------------------------------------
-          # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
+          # lmax x theta_min corresponds to the first zero of the Bessel 𝐽0/4
+          # J0 first zero is 2.4048, J4 first zero is 6.3802
+          # For theta = 1arc_min, lmax * theta_min = 0.87
           ξp_CUTOFF = 2.756  # cutoff scale in arcminutes
-          ξm_CUTOFF = 8.696  # cutoff scale in arcminutes
+          ξm_CUTOFF = 7.311  # cutoff scale in arcminutes
           gc_CUTOFF = 21     # Galaxy clustering cutoff in Mpc/h
         elif (mask_choice == 2):
           # LSST_YX_M2.mask  (lmax = 1500) on CS -----------------------------------------
-          # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
+          # lmax \times theta_min corresponds to the first zero of the Bessel 𝐽0/4
           ξp_CUTOFF = 5.512  # cutoff scale in arcminutes
-          ξm_CUTOFF = 17.392  # cutoff scale in arcminutes
+          ξm_CUTOFF = 14.622  # cutoff scale in arcminutes
           gc_CUTOFF = 21     # Galaxy clustering cutoff in Mpc/h
         elif (mask_choice == 3):
           # LSST_YX_M3.mask  (lmax = 750) on CS -----------------------------------------
           # lmax \times \theta_min corresponds to the first zero of the Bessel 𝐽0/4
           ξp_CUTOFF = 11.024 # cutoff scale in arcminutes
-          ξm_CUTOFF = 34.784 # cutoff scale in arcminutes
+          ξm_CUTOFF = 29.244 # cutoff scale in arcminutes
           gc_CUTOFF = 21     # Galaxy clustering cutoff in Mpc/h
+        elif (mask_choice == 4):
+          # LSST_YX_M4.mask  all ones ---------------------------------------------
+          ξp_CUTOFF = 0 # cutoff scale in arcminutes
+          ξm_CUTOFF = 0 # cutoff scale in arcminutes
+          gc_CUTOFF = 0 # Galaxy clustering cutoff in Mpc/h
