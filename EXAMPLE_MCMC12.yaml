@@ -4,7 +4,7 @@ stop_at_error: False
 
 likelihood:
   lsst_les.lsst_cosmic_shear:
-    data_file: LSST_Y6_M4.dataset
+    data_file: LSST_Y10_M3.dataset
     path: ./external_modules/data/lsst_les
     accuracyboost: 1.0
     integration_accuracy: 0

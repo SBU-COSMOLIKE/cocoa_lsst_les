@@ -4,7 +4,7 @@ stop_at_error: False
 
 likelihood:
   lsst_les.lsst_3x2pt:
-    data_file: LSST_Y3_ONES.dataset
+    data_file: LSST_Y3_M4.dataset
     path: ./external_modules/data/lsst_les
     print_datavector: True
     print_datavector_file: "./projects/lsst_les/chains/lsst_les_y3_theory.modelvector"

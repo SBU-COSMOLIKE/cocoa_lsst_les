@@ -4,7 +4,7 @@ stop_at_error: False
 
 likelihood:
   lsst_les.lsst_cosmic_shear:
-    data_file: LSST_Y3_M4.dataset
+    data_file: LSST_Y6_M2.dataset
     path: ./external_modules/data/lsst_les
     accuracyboost: 1.0
     integration_accuracy: 0
@@ -376,7 +376,7 @@ theory:
     use_renames: True
     extra_args:
       halofit_version: takahashi
-      AccuracyBoost: 1.15
+      AccuracyBoost: 1.05
       lens_potential_accuracy: 1.0
       num_massive_neutrinos: 1
       nnu: 3.046

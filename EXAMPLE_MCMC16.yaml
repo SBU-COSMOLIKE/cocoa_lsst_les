@@ -3,8 +3,8 @@ debug: False
 stop_at_error: False
 
 likelihood:
-  lsst_les.lsst_cosmic_shear:
-    data_file: LSST_Y10_M4.dataset
+  lsst_les.lsst_3x2pt:
+    data_file: LSST_Y3_M1.dataset
     path: ./external_modules/data/lsst_les
     accuracyboost: 1.0
     integration_accuracy: 0
@@ -120,6 +120,9 @@ params:
   logAs:
     derived: 'lambda As: np.log(As * 10**10)'
     latex: \log(A_s \times 10^{10})
+  h:
+    derived: 'lambda H0: H0/100.0'
+    latex: h
 # ---------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------
@@ -430,11 +433,12 @@ sampler:
             As_1e9, ns, H0, omegab, omegam
           ]
         ]
-      - [3,
+      - [2,
           [
             LSST_DZ_S1, LSST_DZ_S2, LSST_DZ_S3, LSST_DZ_S4, LSST_DZ_S5, 
             LSST_DZ_S6, LSST_DZ_S7, LSST_DZ_S8, LSST_DZ_S9, LSST_DZ_S10,
-            LSST_A1_1, LSST_A1_2,
+            LSST_A1_1, LSST_A1_2, LSST_B1_1, LSST_B1_2, LSST_B1_3, LSST_B1_4,
+            LSST_B1_5, LSST_B1_6, LSST_B1_7, LSST_B1_8, LSST_B1_9, LSST_B1_10
           ]
         ]
       - [25,
