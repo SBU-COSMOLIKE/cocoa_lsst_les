@@ -4,10 +4,10 @@ stop_at_error: False
 
 likelihood:
   lsst_les.lsst_3x2pt:
-    data_file: LSST_Y1_ONES.dataset
+    data_file: LSST_Y10_ONES.dataset
     path: ./external_modules/data/lsst_les
     print_datavector: True
-    print_datavector_file: "./projects/lsst_les/chains/lsst_les_y1_theory.modelvector"
+    print_datavector_file: "./projects/lsst_les/chains/lsst_les_y10_theory.modelvector"
     accuracyboost: 4.0
     integration_accuracy: 20
     kmax_boltzmann: 30.0
@@ -431,4 +431,4 @@ sampler:
       LSST_B1_9: 2.1
       LSST_B1_10: 2.2
 
-output: ./projects/lsst_les/chains/EXAMPLE_EVALUATE1
+output: ./projects/lsst_les/chains/EXAMPLE_EVALUATE4

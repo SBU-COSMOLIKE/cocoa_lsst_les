@@ -1,22 +1,22 @@
 timing: True
 debug: False
-stop_at_error: False
+stop_at_error: True
 
 likelihood:
   lsst_les.lsst_3x2pt:
-    data_file: LSST_Y1_ONES.dataset
+    data_file: LSST_Y3_M1.dataset
     path: ./external_modules/data/lsst_les
-    print_datavector: True
-    print_datavector_file: "./projects/lsst_les/chains/lsst_les_y1_theory.modelvector"
-    accuracyboost: 4.0
-    integration_accuracy: 20
-    kmax_boltzmann: 30.0
+    print_datavector: False
+    print_datavector_file: "./projects/lsst_les/chains/example1_lsst_les_y1_theory.modelvector"
+    accuracyboost: 1.0
+    integration_accuracy: 1
+    kmax_boltzmann: 10.0
 
 params:
   As_1e9:
     prior:
-      min: 1.7
-      max: 2.5
+      min: 0.5
+      max: 5
     ref:
       dist: norm
       loc: 2.1
@@ -27,8 +27,8 @@ params:
     renames: A
   ns:
     prior:
-      min: 0.92
-      max: 1.00
+      min: 0.87
+      max: 1.07
     ref:
       dist: norm
       loc: 0.96605
@@ -37,18 +37,18 @@ params:
     latex: n_\mathrm{s}
   H0:
     prior:
-      min: 61
-      max: 73
+      min: 55
+      max: 91
     ref:
       dist: norm
       loc: 67.32
-      scale: 3
+      scale: 5
     proposal: 3
     latex: H_0
   omegab:
     prior:
-      min: 0.04
-      max: 0.06
+      min: 0.03
+      max: 0.07
     ref:
       dist: norm
       loc: 0.0495
@@ -58,8 +58,8 @@ params:
     drop: true
   omegam:
     prior:
-      min: 0.24
-      max: 0.40
+      min: 0.1
+      max: 0.9
     ref:
       dist: norm
       loc: 0.316
@@ -68,10 +68,34 @@ params:
     latex: \Omega_\mathrm{m}
     drop: true
   mnu:
-    value: 0.06
+    prior:
+      min: 0.06
+      max: 0.6
+    ref:
+      dist: norm
+      loc: 0.25
+      scale: 0.1
     proposal: 0.05
+  w0pwa:
+    prior:
+      min: -5 
+      max: -0.01
+    ref:
+      dist: norm
+      loc: -0.99
+      scale: 0.05
+    proposal: 0.05
+    latex: w_{0,\mathrm{DE}}+w_{a,\mathrm{DE}}
+    drop: true
   w:
-    value: -1.0
+    prior:
+      min: -3
+      max: -0.01
+    ref:
+      dist: norm
+      loc: -0.99
+      scale: 0.05
+    proposal: 0.05
     latex: w_{0,\mathrm{DE}}
   tau:
     value: 0.0697186
@@ -86,6 +110,9 @@ params:
   As:
     value: 'lambda As_1e9: 1e-9 * As_1e9'
     latex: A_\mathrm{s}
+  wa:
+    value: 'lambda w0pwa, w: w0pwa - w'
+    latex: w_{a,\mathrm{DE}}
   omegabh2:
     value: 'lambda omegab, H0: omegab*(H0/100)**2'
     latex: \Omega_\mathrm{b} h^2
@@ -381,13 +408,13 @@ theory:
     use_renames: True
     extra_args:
       halofit_version: takahashi
-      AccuracyBoost: 3.0
+      AccuracyBoost: 1.05
       lens_potential_accuracy: 1.0
       num_massive_neutrinos: 1
       nnu: 3.046
       dark_energy_model: ppf
       accurate_massive_neutrino_transfers: false
-      k_per_logint: 40
+      k_per_logint: 20
 
 sampler:
   evaluate:
@@ -398,6 +425,7 @@ sampler:
       H0: 69.00
       omegab: 0.04116782188
       omegam: 0.31018158414
+      mnu: 0.06
       LSST_DZ_S1: 0.0
       LSST_DZ_S2: 0.0
       LSST_DZ_S3: 0.0
@@ -420,15 +448,27 @@ sampler:
       LSST_M10: 0.0
       LSST_A1_1: 0.5
       LSST_A1_2: 0.0
-      LSST_B1_1: 1.3
-      LSST_B1_2: 1.4
-      LSST_B1_3: 1.5
-      LSST_B1_4: 1.6
-      LSST_B1_5: 1.7
-      LSST_B1_6: 1.8
-      LSST_B1_7: 1.9
-      LSST_B1_8: 2.0
-      LSST_B1_9: 2.1
-      LSST_B1_10: 2.2
+      w0pwa: -0.999
+      w: -0.999
+      LSST_DZ_L1: 0.0
+      LSST_DZ_L2: 0.0
+      LSST_DZ_L3: 0.0
+      LSST_DZ_L4: 0.0
+      LSST_DZ_L5: 0.0
+      LSST_DZ_L6: 0.0
+      LSST_DZ_L7: 0.0
+      LSST_DZ_L8: 0.0
+      LSST_DZ_L9: 0.0
+      LSST_DZ_L10: 0.0
+      LSST_B1_1: 1.0
+      LSST_B1_2: 1.0
+      LSST_B1_3: 1.0
+      LSST_B1_4: 1.0
+      LSST_B1_5: 1.0
+      LSST_B1_6: 1.0
+      LSST_B1_7: 1.0
+      LSST_B1_8: 1.0
+      LSST_B1_9: 1.0
+      LSST_B1_10: 1.0
 
-output: ./projects/lsst_les/chains/EXAMPLE_EVALUATE1
+output: ./projects/lsst_les/chains/EXAMPLE_EVALUATE21

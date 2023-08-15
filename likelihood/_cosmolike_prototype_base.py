@@ -371,8 +371,9 @@ class _cosmolike_prototype_base(DataSetLikelihood):
     )
     ci.set_nuisance_clustering_photoz(
       bias = [
+        # LENS = SOURCE
         params_values.get(p, None) for p in [
-          "LSST_DZ_L"+str(i+1) for i in range(self.lens_ntomo)
+          "LSST_DZ_S"+str(i+1) for i in range(self.lens_ntomo)
         ]
       ]
     )
@@ -383,7 +384,7 @@ class _cosmolike_prototype_base(DataSetLikelihood):
         ]
       ]
     )
-
+    
   # ------------------------------------------------------------------------
   # --------------------------- baryonic PCAs ------------------------------
   # ------------------------------------------------------------------------

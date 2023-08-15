@@ -86,6 +86,8 @@ void cpp_initial_setup()
 
   like.high_def_integration = 1;
 
+  gsl_set_error_handler_off();
+
   spdlog::debug("\x1b[90m{}\x1b[0m: Ends", "initial_setup");
 }
 
@@ -340,7 +342,8 @@ void cpp_init_lens_sample(std::string multihisto_file, const int Ntomo, const do
 
   memcpy(redshift.clustering_REDSHIFT_FILE, multihisto_file.c_str(), multihisto_file.size()+1);
 
-  redshift.clustering_photoz = 4;
+  like.use_ggl_efficiency_zoverlap = 0; // in lens = source, Supranta opt to not use ggl_efficiency
+  redshift.clustering_photoz = 7;
   tomo.clustering_Nbin = Ntomo;
   tomo.clustering_Npowerspectra = tomo.clustering_Nbin;
 
@@ -407,7 +410,8 @@ void cpp_init_source_sample(std::string multihisto_file, const int Ntomo)
   // convert std::string to char*
   memcpy(redshift.shear_REDSHIFT_FILE, multihisto_file.c_str(), multihisto_file.size() + 1);
 
-  redshift.shear_photoz = 4;
+  like.use_ggl_efficiency_zoverlap = 0; // in lens = source, Supranta opt to not use ggl_efficiency
+  redshift.shear_photoz = 7;
   tomo.shear_Nbin = Ntomo;
   tomo.shear_Npowerspectra = tomo.shear_Nbin * (tomo.shear_Nbin + 1) / 2;
 
