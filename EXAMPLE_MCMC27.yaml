@@ -7,7 +7,7 @@ likelihood:
     data_file: LSST_Y6_M3.dataset
     path: ./external_modules/data/lsst_les
     accuracyboost: 1.0
-    integration_accuracy: 1
+    integration_accuracy: 0
     kmax_boltzmann: 5.0
 
 params:

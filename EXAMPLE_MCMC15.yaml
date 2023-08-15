@@ -6,11 +6,9 @@ likelihood:
   lsst_les.lsst_cosmic_shear:
     data_file: LSST_Y10_M3.dataset
     path: ./external_modules/data/lsst_les
-    print_datavector: False
-    print_datavector_file: "./projects/lsst_les/chains/example1_lsst_les_y3_theory.modelvector"
     accuracyboost: 1.0
-    integration_accuracy: 1
-    kmax_boltzmann: 10.0
+    integration_accuracy: 0
+    kmax_boltzmann: 5.0
 
 params:
   As_1e9:
