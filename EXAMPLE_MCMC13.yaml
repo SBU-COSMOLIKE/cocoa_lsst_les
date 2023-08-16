@@ -20,7 +20,7 @@ params:
       loc: 2.1
       scale: 0.65
     proposal: 0.4
-    latex: 10^9 A_\mathrm{s})
+    latex: 10^9 A_\mathrm{s}
     drop: true
     renames: A
   ns:
@@ -480,7 +480,7 @@ theory:
     use_renames: True
     extra_args:
       halofit_version: takahashi
-      AccuracyBoost: 1.05
+      AccuracyBoost: 1.1
       lens_potential_accuracy: 1.0
       num_massive_neutrinos: 1
       nnu: 3.046

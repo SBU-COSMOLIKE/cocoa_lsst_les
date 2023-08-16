@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH --job-name=RLES
+#SBATCH --job-name=RLES-MC
 #SBATCH --output=DY3-%A_%a.out
 #SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --ntasks-per-node=4
-#SBATCH --ntasks-per-socket=2
+#SBATCH --ntasks=8
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks-per-socket=4
 #SBATCH --cpus-per-task=8
 #SBATCH --time=120:00:00
 #SBATCH --partition=standard
@@ -25,7 +25,7 @@ echo Slurm job NAME is $SLURM_JOB_NAME
 echo Slurm job ID is $SLURM_JOBID
 
 cd $SLURM_SUBMIT_DIR
-conda activate cocoaemu
+conda activate cocoapy38
 source start_cocoa
 
 echo Cocoa Conda environment Activated
