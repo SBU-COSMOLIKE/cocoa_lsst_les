@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#SBATCH --job-name=RLES-MC
-#SBATCH --output=DY3-%A_%a.out
+#SBATCH --job-name=RLES-MC2
+#SBATCH --output=RLES-MC2-%A_%a.out
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
 #SBATCH --ntasks-per-node=4
