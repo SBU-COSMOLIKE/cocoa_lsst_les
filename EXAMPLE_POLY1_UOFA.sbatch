@@ -1,9 +1,11 @@
 #!/bin/bash
 
-#SBATCH --job-name=RY1LES_P1
+#SBATCH --job-name=RY1_P1
 #SBATCH --output=RY1_P1-%j.out 
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=30
+#SBATCH --ntasks=28
+#SBATCH --ntasks-per-socket=14
+#SBATCH --ntasks-per-node=28
 #SBATCH --cpus-per-task=3
 #SBATCH --partition=high_priority
 #SBATCH --qos=user_qos_timeifler
@@ -34,4 +36,4 @@ else
   export OMP_NUM_THREADS=1
 fi
 
-mpirun -n ${SLURM_NTASKS} --oversubscribe --report-bindings --mca btl tcp,self --bind-to core:overload-allowed --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_y1/EXAMPLE_POLY1.yaml -r
+mpirun -n ${SLURM_NTASKS} --oversubscribe --report-bindings --mca btl tcp,self --bind-to core:overload-allowed --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_y1/EXAMPLE_POLY${SLURM_ARRAY_TASK_ID}.yaml -r
