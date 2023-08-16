@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#SBATCH --job-name=RY1_P1
-#SBATCH --output=RY1_P1-%j.out 
+#SBATCH --job-name=RLESY1_P1
+#SBATCH --output=RLESY1_P1-%j.out 
 #SBATCH --nodes=1
 #SBATCH --ntasks=28
 #SBATCH --ntasks-per-socket=14
