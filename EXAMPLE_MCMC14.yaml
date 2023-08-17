@@ -2,6 +2,76 @@ timing: True
 debug: False
 stop_at_error: False
 
+# IN THIS EXAMPLE, WE ASSUMED THE DATA VECTOR WERE CREATED W/ THE FOLLOWING 
+# PARAMETERS
+#  As_1e9: 2.14881151807
+#  ns: 0.97
+#  H0: 69.00
+#  omegab: 0.04116782188
+#  omegam: 0.31018158414
+#  LSST_DZ_S1: 0.0
+#  LSST_DZ_S2: 0.0
+#  LSST_DZ_S3: 0.0
+#  LSST_DZ_S4: 0.0
+#  LSST_DZ_S5: 0.0
+#  LSST_DZ_S6: 0.0
+#  LSST_DZ_S7: 0.0
+#  LSST_DZ_S8: 0.0
+#  LSST_DZ_S9: 0.0
+#  LSST_DZ_S10: 0.0
+#  LSST_M1: 0.0
+#  LSST_M2: 0.0
+#  LSST_M3: 0.0
+#  LSST_M4: 0.0
+#  LSST_M5: 0.0
+#  LSST_M6: 0.0
+#  LSST_M7: 0.0
+#  LSST_M8: 0.0
+#  LSST_M9: 0.0
+#  LSST_M10: 0.0
+#  LSST_A1_1: 0.5
+#  LSST_A1_2: 0.0
+#  LSST_B1_1: 1.3
+#  LSST_B1_2: 1.4
+#  LSST_B1_3: 1.5
+#  LSST_B1_4: 1.6
+#  LSST_B1_5: 1.7
+#  LSST_B1_6: 1.8
+#  LSST_B1_7: 1.9
+#  LSST_B1_8: 2.0
+#  LSST_B1_9: 2.1
+#  LSST_B1_10: 2.2
+#  LSST_BMAG_1:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^1
+#  LSST_BMAG_2:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^2
+#  LSST_BMAG_3:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^3
+#  LSST_BMAG_4:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^4
+#  LSST_BMAG_5:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^5
+#  LSST_BMAG_6:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^6
+#  LSST_BMAG_7:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^7
+#  LSST_BMAG_8:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^8
+#  LSST_BMAG_9:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^9
+#  LSST_BMAG_10:
+#    value: 0.0
+#    latex: b_\mathrm{BMAG-LSST}^{10}
+
 likelihood:
   lsst_les.lsst_3x2pt:
     data_file: LSST_Y1_M2.dataset
@@ -469,6 +539,36 @@ params:
       scale: 0.1
     proposal: 0.1
     latex: b_\mathrm{1-LSST}^10
+  LSST_BMAG_1:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^1
+  LSST_BMAG_2:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^2
+  LSST_BMAG_3:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^3
+  LSST_BMAG_4:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^4
+  LSST_BMAG_5:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^5
+  LSST_BMAG_6:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^6
+  LSST_BMAG_7:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^7
+  LSST_BMAG_8:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^8
+  LSST_BMAG_9:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^9
+  LSST_BMAG_10:
+    value: 0.0
+    latex: b_\mathrm{BMAG-LSST}^{10}
 # ---------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------
@@ -526,7 +626,7 @@ sampler:
     # --------------------------------------
     measure_speeds: False
     drag: False
-    oversample_power: 0.2
+    oversample_power: 0.3
     oversample_thin: True
     blocking:
       - [1,
@@ -542,7 +642,7 @@ sampler:
             LSST_B1_5, LSST_B1_6, LSST_B1_7, LSST_B1_8, LSST_B1_9, LSST_B1_10
           ]
         ]
-      - [25,
+      - [50,
           [
             LSST_M1, LSST_M2, LSST_M3, LSST_M4, LSST_M5,
             LSST_M6, LSST_M7, LSST_M8, LSST_M9, LSST_M10

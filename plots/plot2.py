@@ -28,7 +28,7 @@ matplotlib.rcParams['savefig.bbox'] = 'tight'
 matplotlib.rcParams['savefig.format'] = 'pdf'
 
 parameter = [u'omegam',u'sigma8', u'As_1e9', u'ns', u'SS8', u'omegab', u'H0', u'LSST_A1_1', u'LSST_A1_2']
-chaindir=r'.'
+chaindir=os.getcwd()
 
 analysissettings={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': u'0.5',
 'range_confidence' : u'0.005'}
@@ -37,30 +37,30 @@ analysissettings2={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': 
 'range_confidence' : u'0.005'}
 
 root_chains = (
-  '../chains/EXAMPLE_MCMC13',
-  '../chains/EXAMPLE_MCMC14',
-  '../chains/EXAMPLE_MCMC15',
+  'EXAMPLE_MCMC13',
+  'EXAMPLE_MCMC14',
+  'EXAMPLE_MCMC15',
 )
 
 
 # --------------------------------------------------------------------------------
-samples=loadMCSamples('./' + root_chains[0],settings=analysissettings)
+samples=loadMCSamples(chaindir + '/../chains/' + root_chains[0],settings=analysissettings)
 p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
-samples.saveAsText('.VM_P2_TMP1')
+samples.saveAsText(chaindir + '/.VM_P2_TMP1')
 # --------------------------------------------------------------------------------
-samples=loadMCSamples('./' + root_chains[1],settings=analysissettings)
+samples=loadMCSamples(chaindir + '/../chains/' + root_chains[1],settings=analysissettings)
 p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
-samples.saveAsText('.VM_P2_TMP2')
+samples.saveAsText(chaindir + '/.VM_P2_TMP2')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples('./' + root_chains[2],settings=analysissettings2)
 p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
-samples.saveAsText('.VM_P2_TMP3')
+samples.saveAsText(chaindir + '/.VM_P2_TMP3')
 # --------------------------------------------------------------------------------
 
 #GET DIST PLOT SETUP
@@ -76,7 +76,9 @@ g.settings.lab_fontsize=15.5
 g.legend_labels=False
 
 param_3d = None
-g.triangle_plot(['.VM_P2_TMP1','.VM_P2_TMP2','.VM_P2_TMP3'],
+g.triangle_plot([chaindir + '/.VM_P2_TMP1', 
+                 chaindir + '/.VM_P2_TMP2',
+                 chaindir + '/.VM_P2_TMP3'],
 parameter,
 plot_3d_with_param=param_3d,line_args=[
 {'lw': 1.2,'ls': 'solid', 'color':'lightcoral'},
