@@ -47,11 +47,11 @@ Git ignores the `data` folder (thanks to `.gitignore`) because the covariance fi
 
 One model evaluation:
 
-        $(cocoa)(.local) mpirun -n 1 --mca btl tcp,self --bind-to core:overload-allowed --rank-by core --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_les/EXAMPLE_EVALUATE1.yaml -f
+        $(cocoa)(.local) mpirun -n 1 --oversubscribe --mca btl vader,tcp,self --bind-to core:overload-allowed --rank-by core --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_les/EXAMPLE_EVALUATE1.yaml -f
  
 MCMC:
 
-        $(cocoa)(.local) mpirun -n 4 --mca btl tcp,self --bind-to core:overload-allowed --rank-by core --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_les/EXAMPLE_MCMC1.yaml -f
+        $(cocoa)(.local) mpirun -n 4 --oversubscribe --mca btl vader,tcp,self --bind-to core:overload-allowed --rank-by core --map-by numa:pe=${OMP_NUM_THREADS} cobaya-run ./projects/lsst_les/EXAMPLE_MCMC1.yaml -f
 
 ## Deleting Cosmolike projects <a name="delete_projects"></a>
 
