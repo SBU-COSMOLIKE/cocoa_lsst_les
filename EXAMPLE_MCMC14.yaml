@@ -636,7 +636,7 @@ sampler:
             As_1e9, ns, H0, omegab, omegam
           ]
         ]
-      - [2,
+      - [1,
           [
             LSST_DZ_S1, LSST_DZ_S2, LSST_DZ_S3, LSST_DZ_S4, LSST_DZ_S5, 
             LSST_DZ_S6, LSST_DZ_S7, LSST_DZ_S8, LSST_DZ_S9, LSST_DZ_S10,
