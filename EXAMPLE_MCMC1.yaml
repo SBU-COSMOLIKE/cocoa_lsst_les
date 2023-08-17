@@ -441,39 +441,6 @@ params:
       scale: 0.01
     proposal: 0.01
     latex: m_\mathrm{LSST}^{10}
-  LSST_BMAG_1:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^1
-  LSST_BMAG_2:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^2
-  LSST_BMAG_3:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^3
-  LSST_BMAG_4:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^4
-  LSST_BMAG_5:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^5
-  LSST_BMAG_6:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^6
-  LSST_BMAG_7:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^7
-  LSST_BMAG_8:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^8
-  LSST_BMAG_9:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^9
-  LSST_BMAG_10:
-    value: 0.0
-    latex: b_\mathrm{BMAG-LSST}^{10}
-# ---------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------
 
 theory:
   camb:
