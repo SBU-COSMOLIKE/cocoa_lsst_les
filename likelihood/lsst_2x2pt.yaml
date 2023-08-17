@@ -5,6 +5,8 @@ samplingboost: 1.0
 integration_accuracy: 0 
 kmax_boltzmann: 5.0
 speed: 1
+# 1 EE2, 2 Halofit
+non_linear_emul: 2
 
 print_intermediate_products: False
 

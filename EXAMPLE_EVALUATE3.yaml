@@ -11,7 +11,9 @@ likelihood:
     accuracyboost: 4.0
     integration_accuracy: 20
     kmax_boltzmann: 30.0
-
+    # 1 EE2, 2 Halofit
+    non_linear_emul: 1
+    
 params:
   As_1e9:
     prior:

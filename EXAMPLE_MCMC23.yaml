@@ -77,8 +77,10 @@ likelihood:
     path: ./external_modules/data/lsst_les
     accuracyboost: 1.0
     integration_accuracy: 0
-    kmax_boltzmann: 5.0
-
+    kmax_boltzmann: 1.0
+    # 1 EE2, 2 Halofit
+    non_linear_emul: 1
+    
 params:
   As_1e9:
     prior:
