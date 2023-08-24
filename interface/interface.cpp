@@ -301,10 +301,10 @@ const double theta_max_arcmin)
     like.theta[i] = x * (std::pow(thetamax, 3) - std::pow(thetamin, 3)) /
       (thetamax*thetamax - thetamin*thetamin);
 
-    spdlog::debug(
+    spdlog::info(
       "\x1b[90m{}\x1b[0m: Bin {:d} - {} = {:.4e}, {} = {:.4e} and {} = {:.4e}",
-      "init_binning", i, "theta_min [rad]", thetamin, "theta [rad]",
-      like.theta[i], "theta_max [rad]", thetamax);
+      "init_binning", i, "theta_min [rad]", thetamin/2.90888208665721580e-4, "theta [rad]",
+      like.theta[i]/2.90888208665721580e-4, "theta_max [rad]", thetamax/2.90888208665721580e-4);
   }
 
   spdlog::debug("\x1b[90m{}\x1b[0m: Ends", "init_binning");
@@ -362,7 +362,7 @@ void cpp_init_lens_sample(std::string multihisto_file, const int Ntomo, const do
     survey.ggl_overlap_cut = 0.0;
   }
 
-  spdlog::debug("\x1b[90m{}\x1b[0m: {} = {} selected.", "init_lens_sample",
+  spdlog::info("\x1b[90m{}\x1b[0m: {} = {} selected.", "init_lens_sample",
     "survey.ggl_overlap_cut", survey.ggl_overlap_cut);
 
   pf_photoz(0.1, 0);
@@ -370,16 +370,30 @@ void cpp_init_lens_sample(std::string multihisto_file, const int Ntomo, const do
     int n = 0;
     for (int i = 0; i < tomo.clustering_Nbin; i++)
     {
-      for (int j = 0; j < tomo.shear_Nbin; j++)
+      for (int j=0; j < tomo.shear_Nbin; j++)
       {
         n += test_zoverlap(i, j);
+        if (test_zoverlap(i, j))
+        {
+          spdlog::info("\x1b[90m{}\x1b[0m: ggl({},{}) is a bin w/ efficiency = {:.10f}", 
+            "init_lens_sample", i, j, ggl_efficiency(i, j));
+        }
       }
     }
     tomo.ggl_Npowerspectra = n;
 
-    spdlog::debug("\x1b[90m{}\x1b[0m: tomo.ggl_Npowerspectra = {}",
+    spdlog::info("\x1b[90m{}\x1b[0m: tomo.ggl_Npowerspectra = {}",
       "init_lens_sample", tomo.ggl_Npowerspectra);
   }
+
+  for (int i=0; i<tomo.clustering_Nbin; i++)
+  {
+    nuisance.bias_zphot_clustering[i] = 0.0;
+
+    spdlog::info("\x1b[90m{}\x1b[0m: bin {} - {} = {}.",
+      "init_lens_sample", i, "<z_L>", zmean(i));
+  }
+
   spdlog::debug("\x1b[90m{}\x1b[0m: Ends", "init_lens_sample");
 }
 
