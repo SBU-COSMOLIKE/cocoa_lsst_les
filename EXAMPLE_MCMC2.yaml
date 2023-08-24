@@ -1,6 +1,16 @@
-timing: True
+timing: False
 debug: False
 stop_at_error: False
+
+likelihood:
+  lsst_les.lsst_cosmic_shear:
+    data_file: LSST_Y1_M2.dataset
+    path: ./external_modules/data/lsst_les
+    accuracyboost: 1.0
+    integration_accuracy: 0
+    kmax_boltzmann: 1.0
+    # 1 EE2, 2 Halofit
+    non_linear_emul: 1
 
 # IN THIS EXAMPLE, WE ASSUMED THE DATA VECTOR WERE CREATED W/ THE FOLLOWING 
 # PARAMETERS
@@ -71,16 +81,6 @@ stop_at_error: False
 #  LSST_BMAG_10:
 #    value: 0.0
 #    latex: b_\mathrm{BMAG-LSST}^{10}
-
-likelihood:
-  lsst_les.lsst_cosmic_shear:
-    data_file: LSST_Y1_M2.dataset
-    path: ./external_modules/data/lsst_les
-    accuracyboost: 1.0
-    integration_accuracy: 0
-    kmax_boltzmann: 1.0
-    # 1 EE2, 2 Halofit
-    non_linear_emul: 1
     
 params:
   As_1e9:
