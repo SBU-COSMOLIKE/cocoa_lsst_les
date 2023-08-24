@@ -92,9 +92,9 @@ contour_lws=[1.0,1.5,1.5,1.0],
 filled=[True,False,False,True],
 shaded=False,
 legend_labels=[
-'LSST-Y6 LES M1 Scale Cuts',
-'LSST-Y6 LES M2 Scale Cuts',
-'LSST-Y6 LES M3 Scale Cuts',
+'LSST-Y6 CS LES M1 Scale Cuts',
+'LSST-Y6 CS LES M2 Scale Cuts',
+'LSST-Y6 CS LES M3 Scale Cuts',
 ],
 legend_loc=(0.48, 0.80))
 

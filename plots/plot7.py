@@ -37,9 +37,9 @@ analysissettings2={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': 
 'range_confidence' : u'0.01'}
 
 root_chains = (
-  'EXAMPLE_MCMC1',
-  'EXAMPLE_MCMC2',
-  'EXAMPLE_MCMC3'
+  'EXAMPLE_MCMC19',
+  'EXAMPLE_MCMC20',
+  'EXAMPLE_MCMC21'
 )
 
 
@@ -48,19 +48,19 @@ samples=loadMCSamples(chaindir + '/../chains/' + root_chains[0],settings=analysi
 p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
-samples.saveAsText(chaindir + '/.VM_P1_TMP1')
+samples.saveAsText(chaindir + '/.VM_P7_TMP1')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[1],settings=analysissettings)
 p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
-samples.saveAsText(chaindir + '/.VM_P1_TMP2')
+samples.saveAsText(chaindir + '/.VM_P7_TMP2')
 # --------------------------------------------------------------------------------
 samples=loadMCSamples(chaindir + '/../chains/' + root_chains[2],settings=analysissettings2)
 p = samples.getParams()
 samples.addDerived(p.omegam*p.H0/100.,name='gamma',label='{\\Omega_m h}')
 samples.addDerived(p.s8omegamp5/0.5477225575,name='SS8',label='{S_8}')
-samples.saveAsText(chaindir + '/.VM_P1_TMP3')
+samples.saveAsText(chaindir + '/.VM_P7_TMP3')
 # --------------------------------------------------------------------------------
 
 #GET DIST PLOT SETUP
@@ -76,9 +76,9 @@ g.settings.lab_fontsize=15.5
 g.legend_labels=False
 
 param_3d = None
-g.triangle_plot([chaindir + '/.VM_P1_TMP1', 
-                 chaindir + '/.VM_P1_TMP2',
-                 chaindir + '/.VM_P1_TMP3'],
+g.triangle_plot([chaindir + '/.VM_P7_TMP1', 
+                 chaindir + '/.VM_P7_TMP2',
+                 chaindir + '/.VM_P7_TMP3'],
 parameter,
 plot_3d_with_param=param_3d,line_args=[
 {'lw': 1.2,'ls': 'solid', 'color':'lightcoral'},
@@ -92,9 +92,9 @@ contour_lws=[1.0,1.5,1.5,1.0],
 filled=[True,False,False,True],
 shaded=False,
 legend_labels=[
-'LSST-Y1 CS LES M1 Scale Cuts',
-'LSST-Y1 CS LES M2 Scale Cuts',
-'LSST-Y1 CS LES M3 Scale Cuts',
+'LSST-Y6 3x2pt LES M1 Scale Cuts',
+'LSST-Y6 3x2pt LES M2 Scale Cuts',
+'LSST-Y6 3x2pt LES M3 Scale Cuts',
 ],
 legend_loc=(0.48, 0.80))
 
