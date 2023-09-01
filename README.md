@@ -37,7 +37,7 @@ Git ignores the `data` folder (thanks to `.gitignore`) because the covariance fi
 
 :five: **Step 5 of 7**: compile the project
  
-        $(cocoa)(.local) source ./projects/lsst_les/scripts/compile_lsst_y1
+        $(cocoa)(.local) source ./projects/lsst_les/scripts/compile_lsst_les
 
 :six: **Step 6 of 7**: select the number of OpenMP cores
     
