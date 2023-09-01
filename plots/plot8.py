@@ -64,7 +64,7 @@ samples.saveAsText(chaindir + '/.VM_P8_TMP3')
 # --------------------------------------------------------------------------------
 
 #GET DIST PLOT SETUP
-g=gplot.getSubplotPlotter(chain_dir=chaindir,analysis_settings=analysissettings2,width_inch=9.5)
+g=gplot.getSubplotPlotter(chain_dir=chaindir,analysis_settings=analysissettings2,width_inch=10.0)
 g.settings.axis_tick_x_rotation=65
 g.settings.lw_contour = 1.2
 g.settings.legend_rect_border = False
@@ -96,5 +96,41 @@ legend_labels=[
 'LSST-Y10 3x2pt LES M1 Scale Cuts',
 ],
 legend_loc=(0.48, 0.80))
+
+for ax in g.subplots[:,0]:
+  if ax is not None:
+    ax.axis(xmin=0.28,xmax=0.36)
+
+for ax in g.subplots[:,1]:
+  if ax is not None:
+    ax.axis(xmin=0.81,xmax=0.92)
+
+for ax in g.subplots[:,2]:
+  if ax is not None:
+    ax.axis(xmin=1.7,xmax=2.5)
+
+for ax in g.subplots[:,3]:
+  if ax is not None:
+    ax.axis(xmin=0.92,xmax=1.00)
+
+for ax in g.subplots[:,4]:
+  if ax is not None:
+    ax.axis(xmin=0.875,xmax=0.905)
+
+for ax in g.subplots[:,5]:
+  if ax is not None:
+    ax.axis(xmin=0.04,xmax=0.06)
+
+for ax in g.subplots[:,6]:
+  if ax is not None:
+    ax.axis(xmin=61,xmax=73)
+
+for ax in g.subplots[:,7]:
+  if ax is not None:
+    ax.axis(xmin=0.25,xmax=0.75)
+
+for ax in g.subplots[:,8]:
+  if ax is not None:
+    ax.axis(xmin=-1.75,xmax=1.75)
 
 g.export()

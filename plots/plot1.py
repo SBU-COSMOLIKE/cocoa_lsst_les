@@ -64,7 +64,7 @@ samples.saveAsText(chaindir + '/.VM_P1_TMP3')
 # --------------------------------------------------------------------------------
 
 #GET DIST PLOT SETUP
-g=gplot.getSubplotPlotter(chain_dir=chaindir,analysis_settings=analysissettings2,width_inch=9.5)
+g=gplot.getSubplotPlotter(chain_dir=chaindir,analysis_settings=analysissettings2,width_inch=10.0)
 g.settings.axis_tick_x_rotation=65
 g.settings.lw_contour = 1.2
 g.settings.legend_rect_border = False
