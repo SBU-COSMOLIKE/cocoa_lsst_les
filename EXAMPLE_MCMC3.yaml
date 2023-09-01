@@ -512,7 +512,8 @@ sampler:
             LSST_A1_1, LSST_A1_2,
           ]
         ]
-      - [50,
+      # EE2 takes ~0.2seconds and runs every time (we will fix this in the future)
+      - [5,
           [
             LSST_M1, LSST_M2, LSST_M3, LSST_M4, LSST_M5,
             LSST_M6, LSST_M7, LSST_M8, LSST_M9, LSST_M10
