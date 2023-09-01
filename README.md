@@ -19,7 +19,13 @@ In this tutorial, we assume the user installed Cocoa via the *Conda installation
         $(cocoa) git clone --depth 1 git@github.com:SBU-COSMOLIKE/cocoa_lsst_les lsst_les
 
 
-The option `--depth 1` prevents git from downloading the entire project history. By convention, the Cosmolike Organization hosts a Cobaya-Cosmolike project named XXX at `CosmoLike/cocoa_XXX`. However, our scripts and YAML files assume the removal of the `cocoa_` prefix when cloning the repository.
+The option `--depth 1` prevents git from downloading the entire project history. 
+
+:warning: **Warning** :warning: Cocoa developers should drop the shallow clone option `--depth 1`; they should also authenticate to GitHub via SSH keys:
+
+        $(cocoapy38) git clone git@github.com:CosmoLike/cocoa_lsst_les lsst_les
+
+By convention, the Cosmolike Organization hosts a Cobaya-Cosmolike project named XXX at `CosmoLike/cocoa_XXX`. However, our scripts and YAML files assume the removal of the `cocoa_` prefix when cloning the repository.
 
 :three: **Step 3 of 7**: go to `cocoa_les` folder and uncompress the `data` folder
 
