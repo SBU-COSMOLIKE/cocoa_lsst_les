@@ -37,9 +37,9 @@ analysissettings2={'smooth_scale_1D':0.35,'smooth_scale_2D':0.35,'ignore_rows': 
 'range_confidence' : u'0.01'}
 
 root_chains = (
-  'EXAMPLE_MCMC16',
+  'EXAMPLE_MCMC18',
   'EXAMPLE_MCMC17',
-  'EXAMPLE_MCMC18'
+  'EXAMPLE_MCMC16'
 )
 
 
@@ -81,20 +81,19 @@ g.triangle_plot([chaindir + '/.VM_P2_TMP1',
                  chaindir + '/.VM_P2_TMP3'],
 parameter,
 plot_3d_with_param=param_3d,line_args=[
-{'lw': 1.2,'ls': 'solid', 'color':'lightcoral'},
-{'lw': 1.2,'ls': '--', 'color':'black'},
-{'lw': 1.6,'ls': '-.', 'color': 'maroon'},
-{'lw': 1.6,'ls': 'solid', 'color': 'indigo'},
+{'lw': 2.4,'ls': 'solid', 'color':'lightcoral'},
+{'lw': 1.4,'ls': '--', 'color':'black'},
+{'lw': 1.0,'ls': 'solid', 'color': 'indigo'},
 ],
-contour_colors=['lightcoral','black','maroon','indigo'],
-contour_ls=['solid','--','-.'], 
-contour_lws=[1.0,1.5,1.5,1.0],
-filled=[True,False,False,True],
+contour_colors=['lightcoral','black','indigo'],
+contour_ls=['solid','--','solid'], 
+contour_lws=[2.4,1.4,1.0],
+filled=[True,False,False],
 shaded=False,
 legend_labels=[
-'LSST-Y3 3x2pt LES M1 Scale Cuts',
-'LSST-Y3 3x2pt LES M2 Scale Cuts',
 'LSST-Y3 3x2pt LES M3 Scale Cuts',
+'LSST-Y3 3x2pt LES M2 Scale Cuts',
+'LSST-Y3 3x2pt LES M1 Scale Cuts',
 ],
 legend_loc=(0.48, 0.80))
 
