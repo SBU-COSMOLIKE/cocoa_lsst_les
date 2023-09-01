@@ -30,7 +30,7 @@ Git ignores the `data` folder (thanks to `.gitignore`) because the covariance fi
 
 :four: **Step 4 of 7**: go back to the Cocoa main folder, and activate the private Python environment
     
-        $(cocoa) cd ../
+        $(cocoa) cd ../../
         $(cocoa) source start_cocoa
  
 :warning: (**warning**) :warning: Remember to run the start_cocoa script only after cloning the project repository. The script *start_cocoa* creates the necessary symbolic links and adds the *Cobaya-Cosmolike interface* of all projects to `LD_LIBRARY_PATH` and `PYTHONPATH` paths.
